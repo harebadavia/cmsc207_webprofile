@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel | About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-shell">
+    <div class="shell-banner" aria-hidden="true"></div>
+    <div class="shell-content">
+      <img
+        class="shell-avatar"
+        src="media/dan.jpg"
+        alt="Profile photo of Daniel"
+      >
+      <div class="shell-meta">
+        <h1>Daniel Rebadavia</h1>
+        <p class="handle">@danielrebadavia</p>
+      </div>
+    </div>
+    <nav class="tab-nav" aria-label="Profile pages">
+      <a class="tab active" href="about.html" aria-current="page">About</a>
+      <a class="tab" href="hobbies.html">Hobbies</a>
+      <a class="tab" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="feed">
+    <section class="post-card">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Hector Daniel Rebadavia, a web developer who enjoys building practical systems and web applications. My work involves developing both front-end and back-end features, designing databases, and turning ideas into working software. I like working on projects that solve real problems and improve everyday workflows.
+      </p>
+    </section>
+
+
+    <section class="post-card fun-fact-card">
+      <div class="fact-top">
+        <p class="fact-label">Interactive Card</p>
+        <h2>Fun Fact Generator</h2>
+        <small class="fact-subtext">Click below and reveal a random personal fun fact.</small>
+      </div>
+
+      <div class="fact-body">
+        <button id="fun-fact-btn" type="button">Reveal Fun Fact</button>
+        <div class="fact-output">
+          <p id="fun-fact-text" aria-live="polite">Click the button!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
