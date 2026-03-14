@@ -102,8 +102,13 @@ a:hover {
   text-align: center;
   padding: 0.85rem 1rem;
   color: var(--text-soft);
+  border: none;
   border-bottom: 3px solid transparent;
   font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+  background: none;
+  cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -317,6 +322,10 @@ a:hover {
 
 #fun-fact-text {
   margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 700px) {

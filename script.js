@@ -1,3 +1,29 @@
+// Tab switching
+const tabs = document.querySelectorAll(".tab[data-target]");
+const sections = document.querySelectorAll(".tab-section");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.target;
+
+    tabs.forEach((t) => {
+      t.classList.remove("active");
+      t.removeAttribute("aria-current");
+    });
+    tab.classList.add("active");
+    tab.setAttribute("aria-current", "page");
+
+    sections.forEach((section) => {
+      if (section.id === target) {
+        section.classList.remove("hidden");
+      } else {
+        section.classList.add("hidden");
+      }
+    });
+  });
+});
+
+// Fun fact generator
 const funFactButton = document.getElementById("fun-fact-btn");
 const funFactText = document.getElementById("fun-fact-text");
 
