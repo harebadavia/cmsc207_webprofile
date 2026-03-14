@@ -3,13 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting to Profile</title>
-  <meta http-equiv="refresh" content="0; url=about.html">
-  <script>
-    window.location.replace("about.html");
-  </script>
+  <title>Daniel Rebadavia</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>Redirecting to <a href="about.html">About Page</a>...</p>
+  <header class="top-shell">
+    <div class="shell-banner" aria-hidden="true"></div>
+    <div class="shell-content">
+      <img
+        class="shell-avatar"
+        src="media/dan.jpg"
+        alt="Profile photo of Daniel"
+      >
+      <div class="shell-meta">
+        <h1>Daniel Rebadavia</h1>
+        <p class="handle">@danielrebadavia</p>
+      </div>
+    </div>
+    <nav class="tab-nav" aria-label="Profile pages">
+      <button class="tab active" data-target="about" aria-current="page">About</button>
+      <button class="tab" data-target="hobbies">Hobbies</button>
+      <button class="tab" data-target="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main class="feed">
+
+    <!-- About Section -->
+    <section id="about" class="tab-section">
+      <div class="post-card">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Hector Daniel Rebadavia, a web developer who enjoys building practical systems and web applications. My work involves developing both front-end and back-end features, designing databases, and turning ideas into working software. I like working on projects that solve real problems and improve everyday workflows.
+        </p>
+      </div>
+
+      <div class="post-card fun-fact-card">
+        <div class="fact-top">
+          <p class="fact-label">Interactive Card</p>
+          <h2>Fun Fact Generator</h2>
+          <small class="fact-subtext">Click below and reveal a random personal fun fact.</small>
+        </div>
+
+        <div class="fact-body">
+          <button id="fun-fact-btn" type="button">Reveal Fun Fact</button>
+          <div class="fact-output">
+            <p id="fun-fact-text" aria-live="polite">Click the button!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="tab-section hidden">
+      <div class="post-card">
+        <h2>Hobbies &amp; Interests</h2>
+        <ul class="hobby-list">
+          <li>
+            <h3>Working Out</h3>
+            <p>I regularly spend time at the gym doing weight training. It helps me stay disciplined, focused, and energized for work and projects.</p>
+          </li>
+          <li>
+            <h3>Traveling</h3>
+            <p>I enjoy exploring new places, experiencing different cultures, and trying local food whenever I get the chance to travel.</p>
+          </li>
+          <li>
+            <h3>Photography</h3>
+            <p>Photography is a creative hobby I enjoy, especially capturing moments during trips and everyday life.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="tab-section hidden">
+      <div class="post-card contact-hero">
+        <p class="contact-label">Let's Connect</p>
+        <h2>Contact Info</h2>
+        <p class="contact-copy">
+          If you would like to collaborate, discuss projects, or simply say hi, feel free to reach out.
+        </p>
+
+        <a class="email-pill" href="mailto:hdrebadavia@gmail.com">
+          <span class="email-icon" aria-hidden="true">✉</span>
+          <span>hdrebadavia@gmail.com</span>
+        </a>
+      </div>
+
+      <div class="post-card">
+        <h2>Social Links</h2>
+        <div class="social-grid">
+          <a class="social-tile" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub logo">
+            <div>
+              <h3>GitHub</h3>
+              <p>View my code projects and repositories.</p>
+            </div>
+          </a>
+
+          <a class="social-tile" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn logo">
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Connect with me professionally.</p>
+            </div>
+          </a>
+
+          <a class="social-tile" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/x/000000" alt="X logo">
+            <div>
+              <h3>Twitter/X</h3>
+              <p>Follow quick updates and thoughts.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
